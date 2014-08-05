@@ -1081,6 +1081,7 @@ say_recipe 'gems'
 
 ## Ruby on Rails
 insert_into_file('Gemfile', "ruby '#{RUBY_VERSION}'\n", :before => /^ *gem 'rails'/, :force => false)
+insert_into_file('Gemfile', "gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]\n", :before => /^end/, :force => false)
 
 ## Cleanup
 # remove the 'sdoc' gem
