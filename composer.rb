@@ -2078,6 +2078,7 @@ end
 
 
 # >-----------------------------[ Final Gemfile Write ]------------------------------<
+gsub_file 'Gemfile', /.*gem 'tzinfo-data', platforms: [:mingw, :mswin]'\n/, "gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]\n"
 Gemfile.write
 
 # >---------------------------------[ Diagnostics ]----------------------------------<
